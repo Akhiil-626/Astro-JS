@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        h1,h3,h4{
+            color:black;
+        }
+        body{
+            background-color: black;
+            width: 100%;
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            margin: 0;
+        }
+
+        hr{
+            height: 3px;
+            background-color:black;
+        }
+
+        .form{
+            display: inline-block;
+            background-color: white;
+            padding: 20px;
+            border: 3px solid white;
+            margin: 50px;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        #first,#last,#email,#pass,#file,#age,#feed,#com{
+            margin-top: 5px;
+            margin-bottom: 5px;
+            width: 250px;
+            padding: 5px;
+            color: black;
+            font-weight: bold;
+        }
+
+        #term{
+            display: inline-block;
+            margin: auto;
+        }
+
+
+        h1 {
+            text-align: center;
+            background: linear-gradient(45deg, rgb(70, 70, 238), rgb(190, 49, 72));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p{
+            display: inline-block;
+            color: black;
+        }
+
+        .sub{
+            margin: 20px 0 10px 0;
+            background-color: #151717;
+            border: none;
+            color: white;
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 10px;
+            height: 50px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        a:visited{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <form action="index.php" method="get">
+        <div class="form">
+            <h1>Registration Form</h1>
+            <h4>Please fill out this form with the required information</h4>
+            <hr>
+            <section>
+                <label for="first" style="color: black;">Enter your First Name :</label><br>
+                <input type="text" id="first"><br>
+                <label for="last" style="color: black;">Enter your last Name :</label><br>
+                <input type="text" id="last"><br>
+                <label for="email" style="color: black;">Enter your Email :</label><br>
+                <input type="email" id="email"><br>
+                <label for="pass" style="color: black;">Create a new password :</label><br>
+                <input type="password" id="pass"><br>
+            </section>
+            <hr>
+            <section>
+                <h3>Account type (required)</h3>
+                <input type="radio" id="per" name="AccountType" required>
+                <label for="per" style="color: black;"> Personal</label><br>
+
+                <input type="radio" id="bus" name="AccountType">
+                <label for="bus" style="color: black;"> Business</label><br>
+            </section>
+            <hr>
+            <section>
+                <label for="file" style="color: black;">Upload a profile picture:</label><br>
+                <input type="file" id="file"><br>
+                <label for="age" style="color: black;">Input Your age (years) :</label><br>
+                <input type="number" id="age" min="13"><br>
+                <label for="feed" style="color: black;">How did you hear about us?</label><br>
+                <select id="feed">
+                    <option>(select one)</option>
+                    <option>youtube</option>
+                    <option>Instagram</option>
+                    <option>Whatsapp</option>
+                </select><br>
+                <label for="com" style="color: black;">Provide a Bio :</label><br>
+                <textarea rows="4" cols="25" id="com" placeholder="I like  coding on the beach......"></textarea><br>
+
+                <input id="term" type="checkbox" required>
+                <p>I accept the <a href="#">terms and conditions</a></p><br>
+
+                <input class="sub" type="submit">
+            </section>
+        </div>
+    </form>
+</body>
+</html>
